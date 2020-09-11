@@ -1,5 +1,5 @@
 // https://www.youtube.com/watch?v=t2CEgPsws3U
-
+// LIFO push/pop
 var lettersStack = [];
 var word = "racecar";
 var rword = "";
@@ -16,8 +16,8 @@ for (let i = 0; i < word.length; i++) {
 
 console.log(word);
 console.log(rword);
-if(rword === word){
+if (rword === word) {
   console.log(word + " is a palindrome.");
-}else{
+} else {
   console.log(word + " is not a palindrome");
 }
