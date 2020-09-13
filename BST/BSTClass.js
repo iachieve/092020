@@ -113,7 +113,7 @@ class BST {
       // if we found the node we have three options
       if(data === node.data){
         // case 1: leaf node
-        if(node.left === null && node.right === null){
+        if(!node.left && !node.right){
           return null;
         }
         // case 2: one child node
@@ -146,7 +146,6 @@ class BST {
     this.root = removeNode(this.root, data);
   }
 }
-
 
 const bst = new BST();
 
