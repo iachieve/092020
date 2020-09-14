@@ -145,6 +145,10 @@ class BST {
     };
     this.root = removeNode(this.root, data);
   }
+
+
+  
+
 }
 
 const bst = new BST();
