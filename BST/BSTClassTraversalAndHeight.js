@@ -24,28 +24,28 @@ class BST {
   constructor() {
     this.root = null;
   }
-  add(data){
+  add(data) {
     const node = this.root; // removable?
-    if(node === null){
+    if (node === null) {
       this.root = new Node(data);
       return;
-    }else{
-      const searchTree = function(node){ // extractable?
-        if(data < node.data){
-          if(node.left === null){
+    } else {
+      const searchTree = function (node) { // extractable?
+        if (data < node.data) {
+          if (node.left === null) {
             node.left = new Node(data);
             return;
-          }else if(node.left !== null){
+          } else if (node.left !== null) {
             return searchTree(node.left);
           }
-        }else if (data > node.data){
-          if(node.right === null){
+        } else if (data > node.data) {
+          if (node.right === null) {
             node.right = new Node(data);
             return;
-          }else if(node.right !== null){
+          } else if (node.right !== null) {
             return searchTree(node.right);
           }
-        }else{
+        } else {
           return null;
         }
       };
@@ -53,46 +53,46 @@ class BST {
     }
   }
 
-  findMin(){
+  findMin() {
     let current = this.root;
-    while(current.left !== null){
+    while (current.left !== null) {
       current = current.left;
     }
     return current.data;
   }
 
-  findMax(){
+  findMax() {
     let current = this.root;
-    while(current.right !== null){
+    while (current.right !== null) {
       current = current.right;
     }
     return current.data;
   }
 
-  find(data){
+  find(data) {
     let current = this.root;
-    while(current.data !== data){
-      if(data < current.data){
+    while (current.data !== data) {
+      if (data < current.data) {
         current = current.left;
-      }else{
+      } else {
         current = current.right;
       }
-      if(current === null){
+      if (current === null) {
         return null;
       }
     }
     return current;
   }
 
-  isPresent(data){
+  isPresent(data) {
     let current = this.root;
-    while(current){
-      if(data === current.data){
+    while (current) {
+      if (data === current.data) {
         return true;
       }
-      if(data < current.data){
+      if (data < current.data) {
         current = current.left;
-      }else{
+      } else {
         current = current.right;
       }
     }
@@ -104,41 +104,41 @@ class BST {
   // 2- 1 child : child node takes the node place
   // 3- 2 children : the next higher node takes the node place
 
-  remove(data){
-    const removeNode = function(node, data){
-      if(node === null){
+  remove(data) {
+    const removeNode = function (node, data) {
+      if (node === null) {
         return null;
       }
 
       // if we found the node we have three options
-      if(data === node.data){
+      if (data === node.data) {
         // case 1: leaf node
-        if(!node.left && !node.right){
+        if (!node.left && !node.right) {
           return null;
         }
         // case 2: one child node
         // node has no left
-        if(node.left === null){
+        if (node.left === null) {
           return node.right;
         }
         // node has no right child
-        if(node.right === null){
+        if (node.right === null) {
           return node.left;
         }
         // case 3: node has two children
         var tempNode = node.right;
-        while(tempNode.left !== null){
+        while (tempNode.left !== null) {
           tempNode = tempNode.left;
         }
         node.data = tempNode.data;
         node.right = removeNode(node.right, tempNode.data);
         return node;
       }
-      
-      else if (data < node.data){
+
+      else if (data < node.data) {
         node.left = removeNode(node.left, data);
         return node;
-      }else{
+      } else {
         node.right = removeNode(node.right, data);
         return node;
       }
@@ -148,29 +148,29 @@ class BST {
 
   // min height: the distance between the root node and
   // the first leaf node without two children
-  findMinHeight(node = this.root){
-    if(node == null){
+  findMinHeight(node = this.root) {
+    if (node == null) {
       return -1;
     }
     let left = this.findMinHeight(node.left);
     let right = this.findMinHeight(node.right);
-    if(left < right){
+    if (left < right) {
       return left + 1;
-    }else{
+    } else {
       return right + 1;
     }
   }
 
   // max height: the distance between the root node and the last leaf
-  findMaxHeight(node = this.root){
-    if(node === null){
+  findMaxHeight(node = this.root) {
+    if (node === null) {
       return -1;
     }
     let left = this.findMaxHeight(node.left);
     let right = this.findMaxHeight(node.right);
-    if(left > right){
+    if (left > right) {
       return left + 1;
-    } else{
+    } else {
       return right + 1;
     }
   }
@@ -179,13 +179,13 @@ class BST {
   isBalanced() {
     return (this.findMinHeight() >= this.findMaxHeight() - 1)
   }
-
+  // traversing DFS & BFS tree is O(N)
   // DFS: go as deeply as possible before going to the next subtree
   // DFS 1: inorder: Left-> Root -> Right
-  inOrder(){
-    if(!this.root) return null;
+  inOrder() {
+    if (!this.root) return null;
     let result = new Array();
-    function TraverseInOrder(node){
+    function TraverseInOrder(node) {
       node.left && TraverseInOrder(node.left);
       result.push(node.data);
       node.right && TraverseInOrder(node.right);
@@ -217,25 +217,25 @@ class BST {
     TraverseInOrder(this.root);
     return result;
   }
-  
+
   // BFS: level by level
-  levelOrder(){
+  levelOrder() {
     let result = [];
     let Q = [];
-    if(this.root){
+    if (this.root) {
       Q.push(this.root);
-      while(Q.length > 0){
+      while (Q.length > 0) {
         let node = Q.shift();
         result.push(node.data);
-        if(node.left){
+        if (node.left) {
           Q.push(node.left);
         };
-        if(node.right){
+        if (node.right) {
           Q.push(node.right);
         };
       };
       return result;
-    }else{
+    } else {
       return null;
     }
   }
