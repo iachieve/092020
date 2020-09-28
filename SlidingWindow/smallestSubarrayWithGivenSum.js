@@ -21,7 +21,6 @@ function smallestSubArray(arr, targetSum) {
       currentWindowSum -= arr[windowStart];
       windowStart++;
     }
-
   }
   return minWindowSize;
 }
