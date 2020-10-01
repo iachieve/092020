@@ -132,9 +132,9 @@ var list = new SinglyLinkedList()
 list.push(100)
 list.push(201)
 list.push(250)
-list.push(350)
 list.push(999)
-
+list.push(350)
+list.print()
 
 
 
