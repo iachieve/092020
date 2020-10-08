@@ -1,4 +1,4 @@
-package SelectionAlgorithms;
+package SelectionAlgorithms.QuickSelectAlgo;
 
 public class App {
   public static void main(String[] args) {

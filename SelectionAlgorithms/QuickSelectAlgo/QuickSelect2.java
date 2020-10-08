@@ -1,4 +1,4 @@
-package SelectionAlgorithms;
+package SelectionAlgorithms.QuickSelectAlgo;
 
 import java.util.Random;
 

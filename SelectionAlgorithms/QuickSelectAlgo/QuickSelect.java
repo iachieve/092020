@@ -1,4 +1,4 @@
-package SelectionAlgorithms;
+package SelectionAlgorithms.QuickSelectAlgo;
 
 // Hoare algorithm
 public class QuickSelect {
