@@ -4,6 +4,13 @@
       "type": "java",
       "name": "CodeLens (Launch) - App",
       "request": "launch",
+      "mainClass": "BackTracking.Maze.App",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
       "mainClass": "Misc.EggDropingProblem.App",
       "projectName": "092020_8932eabd"
     },
