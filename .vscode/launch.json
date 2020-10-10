@@ -2,6 +2,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - IntegerReversion",
+      "request": "launch",
+      "mainClass": "Misc.IntegerReversion",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Palindrome",
+      "request": "launch",
+      "mainClass": "Misc.Palindrome",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "BackTracking.KnightsTour.App",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - App",
       "request": "launch",
       "mainClass": "BackTracking.ColoringProblem.App",

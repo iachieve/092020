@@ -35,7 +35,7 @@ class Graph{
             result.push(vertex);
             adjacencyList[vertex].forEach(neighbor => {
                 if(!visited[neighbor]){
-                    return dfs(neighbor)
+                    return dfs(neighbor);
                 }
             });
         })(start);
