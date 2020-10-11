@@ -4,6 +4,27 @@
       "type": "java",
       "name": "CodeLens (Launch) - App",
       "request": "launch",
+      "mainClass": "DynamicProgramming.Knapsack.App",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.Fibonacci.App",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Algorithm",
+      "request": "launch",
+      "mainClass": "DynamicProgramming.Fibonacci.Algorithm",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
       "mainClass": "BackTracking.Sudoku.App",
       "projectName": "092020_8932eabd"
     },
