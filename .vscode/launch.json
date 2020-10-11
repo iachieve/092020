@@ -4,6 +4,13 @@
       "type": "java",
       "name": "CodeLens (Launch) - App",
       "request": "launch",
+      "mainClass": "DynamicProgramming.CoinChange.App",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
       "mainClass": "DynamicProgramming.Knapsack.App",
       "projectName": "092020_8932eabd"
     },
