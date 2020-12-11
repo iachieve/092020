@@ -2,6 +2,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - IsNumberPalindrome",
+      "request": "launch",
+      "mainClass": "Misc.IsNumberPalindrome",
+      "projectName": "092020"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - FindingDuplicatesInArray",
+      "request": "launch",
+      "mainClass": "Misc.FindingDuplicatesInArray",
+      "projectName": "092020_8932eabd"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - App",
       "request": "launch",
       "mainClass": "DynamicProgramming.CoinChange.App",
